@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Prose from '../components/Prose.astro';
+---
+
+<Base title="University Course" description="An official RWTH Aachen university course on effective altruism, featuring talks from world-leading experts.">
+  <PageHero
+    eyebrow="Project Leonardo"
+    title="University course"
+    lead="In cooperation with RWTH Aachen University, EA Aachen offers an official course on effective altruism — featuring talks from world-leading experts in academia and the philanthropic sector."
+  />
+
+  <section class="mx-auto max-w-4xl px-5 py-16">
+    <Prose>
+      <p>
+        <a href="http://eepurl.com/g5LGrL">Subscribe to our newsletter</a> to find out what we're offering — especially
+        if you're an RWTH student.
+      </p>
+
+      <h2>Course summary</h2>
+      <p>
+        The overarching goal is to convey scientifically grounded ideas and methods you can apply in your own life to do
+        good more effectively. Speakers research how to mitigate climate change or prevent global pandemics; others have
+        founded internationally operating charities and share the insights they gained working directly on saving lives.
+        The course is part of <a href="https://www.leonardo.rwth-aachen.de/en/homepage/">Project Leonardo</a>.
+      </p>
+
+      <h2>Programme</h2>
+      <p>For a sense of the format, here's a past course overview:</p>
+      <ol>
+        <li>"Effective Altruism" — an introduction · EA Aachen e.V.</li>
+        <li>Global Health · Bruce Tsai, <a href="https://rethinkpriorities.org/">Rethink Priorities</a></li>
+        <li>Farmed Animal Welfare · Jamie Harris, <a href="https://www.animaladvocacycareers.org/">Animal Advocacy Careers</a></li>
+        <li>Summary "Neartermism" and introduction to "Longtermism" · EA Aachen e.V.</li>
+        <li>Biorisk · Crystal Watson, <a href="https://www.centerforhealthsecurity.org/">Johns Hopkins Center for Health Security</a></li>
+        <li>AI Safety · Tom Lieberum, AI safety researcher</li>
+        <li>Summary "Longtermism" and criticism of effective altruism · EA Aachen e.V. & Prof. Kellerwessel</li>
+      </ol>
+
+      <h2>How to participate</h2>
+      <ul>
+        <li><strong>RWTH students:</strong> register via RWTHonline. Depending on your course of study, you may be eligible for credit points.</li>
+        <li><strong>External participants:</strong> just send a quick email to <a href="mailto:info@ea-aachen.org">info@ea-aachen.org</a> and you're ready to join.</li>
+      </ul>
+    </Prose>
+  </section>
+</Base>

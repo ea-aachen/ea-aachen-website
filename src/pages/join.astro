@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+
+const newsletter = 'http://eepurl.com/g5LGrL';
+const whatsapp = 'https://chat.whatsapp.com/LYduMS20H9j7voTgijQGqW';
+const chat = 'https://forms.gle/k1pcFsic8TdJxxog9?hl=en';
+const archive = 'https://us10.campaign-archive.com/home/?id=3f5fa62bb1&u=d8f281532aca0e1fa682b94af';
+---
+
+<Base title="Get Involved" description="Join Effective Altruism Aachen — we meet almost every week and everyone is welcome.">
+  <PageHero
+    eyebrow="Get involved"
+    title="How to join us"
+    lead="We meet almost every week and our events are open to everyone. We're always happy to meet new people, whatever your background."
+  />
+
+  <section class="mx-auto max-w-4xl px-5 py-16">
+    <div class="grid gap-4 sm:grid-cols-2">
+      <a href={newsletter} class="group rounded-2xl border border-line/60 bg-ink-soft p-6 transition hover:border-accent">
+        <h3 class="text-lg font-semibold text-fg">Sign up for the newsletter</h3>
+        <p class="mt-2 text-sm leading-relaxed text-fg-muted">One email a week with all upcoming events — meetups, socials, reading groups and more.</p>
+        <span class="mt-4 inline-block font-semibold text-accent">Subscribe →</span>
+      </a>
+      <a href={whatsapp} class="group rounded-2xl border border-line/60 bg-ink-soft p-6 transition hover:border-accent">
+        <h3 class="text-lg font-semibold text-fg">Join the WhatsApp group</h3>
+        <p class="mt-2 text-sm leading-relaxed text-fg-muted">Get weekly announcements and join our discussion chats.</p>
+        <span class="mt-4 inline-block font-semibold text-accent">Open WhatsApp →</span>
+      </a>
+    </div>
+
+    <div class="mt-16 space-y-12">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">About our events</h2>
+        <p class="mt-4 leading-relaxed text-fg-muted">
+          We meet every Wednesday at 7 pm, either for a regular meetup or a social. Exact topics and location go out in
+          the weekly newsletter. Meetups feature talks, workshops and other ways to engage with the ideas of effective
+          altruism; socials usually take place in a bar — for personal discussions and a lot of fun with other members
+          of the community.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">What else we do</h2>
+        <p class="mt-4 leading-relaxed text-fg-muted">
+          We're an active local chapter: reading groups, in-depth workshops, hackathons, a "Leonardo" university course,
+          and travelling to conferences together. As part of the German and global community, we also help members join
+          fellowships — both for engaged EAs making career decisions and for newcomers learning what EA is all about.
+        </p>
+        <p class="mt-4 text-sm text-fg-muted">
+          Curious what that looks like? Browse our <a href={archive} class="text-accent hover:underline">past newsletter editions</a>.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-line/60 bg-gradient-to-b from-ink-soft to-ink p-8">
+        <h2 class="text-2xl font-bold tracking-tight">Talk to us</h2>
+        <p class="mt-4 leading-relaxed text-fg-muted">
+          A great way to explore <a href="https://www.centreforeffectivealtruism.org/blog/the-fidelity-model-of-spreading-ideas/" class="text-accent hover:underline">nuanced ideas</a>
+          is to talk them through in person. Want to chat about effective altruism, cause prioritization, donating, ethics,
+          or anything else? Sign up and we'll get in touch — even if this is your first time hearing about EA.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href={chat} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Sign up for a chat</a>
+          <a href={newsletter} class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Get the newsletter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

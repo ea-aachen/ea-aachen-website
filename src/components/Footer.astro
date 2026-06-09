@@ -1,0 +1,49 @@
+---
+import { site } from '../data/site';
+import { href } from '../lib/links';
+import Logo from './Logo.astro';
+const year = new Date().getFullYear();
+const explore = [...site.nav.filter((n) => n.href !== '/'), ...site.more];
+---
+
+<footer class="border-t border-line/60 bg-ink-soft">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="lg:col-span-2">
+      <a href={href('/')} class="flex items-center gap-2.5 font-semibold">
+        <Logo class="h-8 w-8 text-accent" />
+        <span class="text-fg">{site.name}</span>
+      </a>
+      <p class="mt-4 max-w-sm text-sm leading-relaxed text-fg-muted">{site.description}</p>
+    </div>
+
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-fg-muted">Explore</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        {explore.map((item) => (
+          <li><a href={href(item.href)} class="text-fg-muted transition hover:text-fg">{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-fg-muted">Connect</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href={`mailto:${site.contactEmail}`} class="text-fg-muted transition hover:text-fg">{site.contactEmail}</a></li>
+        {site.socials.map((s) => (
+          <li><a href={s.href} class="text-fg-muted transition hover:text-fg">{s.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-line/60">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 text-xs text-fg-muted sm:flex-row sm:items-center sm:justify-between">
+      <p>© {year} {site.name}</p>
+      <div class="flex gap-5">
+        {site.legal.map((item) => (
+          <a href={href(item.href)} class="transition hover:text-fg">{item.label}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>

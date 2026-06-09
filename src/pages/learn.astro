@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Prose from '../components/Prose.astro';
+---
+
+<Base title="Learn More" description="Curated resources to explore effective altruism — introductions, career guides, and in-depth reading.">
+  <PageHero
+    eyebrow="Resources"
+    title="Learn more"
+    lead="There's a lot of great material on effective altruism out there. Here's some of what we'd recommend."
+  />
+
+  <section class="mx-auto max-w-4xl px-5 py-16">
+    <Prose>
+      <h2>Introductory material</h2>
+      <ul>
+        <li>For a general introduction to effective altruism, <a href="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism/">read this</a>.</li>
+        <li><a href="https://www.youtube.com/watch?v=Diuv3XZQXyc">TED Talk</a> by philosopher <a href="https://en.wikipedia.org/wiki/Peter_Singer">Peter Singer</a> on the why and how of effective altruism.</li>
+        <li><a href="https://www.youtube.com/watch?v=WyprXhvGVYk">TED Talk</a> by Oxford philosopher <a href="https://en.wikipedia.org/wiki/William_MacAskill">William MacAskill</a> on the most important problems of our time.</li>
+        <li><a href="http://mindingourway.com/on-caring/">On Caring</a> by Nate Soares — a classic essay exploring the workings of empathy. Warmly recommended for everyone, whether new to EA or not.</li>
+      </ul>
+
+      <h2>Career resources</h2>
+      <ul>
+        <li>80,000 Hours has a great guide to their ideas and to strategic career planning <a href="https://80000hours.org/key-ideas/">here</a>.</li>
+        <li>They also run a <a href="https://80000hours.org/podcast/episodes/">podcast</a> featuring in-depth conversations about the world's most pressing problems. Highly recommended.</li>
+      </ul>
+
+      <h2>In-depth reading</h2>
+      <ul>
+        <li><a href="http://effectivealtruism.org/">Effectivealtruism.org</a> maintains a <a href="https://www.effectivealtruism.org/resources/">list of resources</a> and a <a href="https://www.effectivealtruism.org/articles/">collection of excellent articles</a>.</li>
+        <li>The <a href="http://effective-altruism.com/">EA Forum</a> is a place for collaborative discussion on how to do the most good.</li>
+        <li>Nate Soares' <a href="http://mindingourway.com/guilt/">series on replacing guilt</a> with healthier, stronger forms of motivation. Long, but highly worth it.</li>
+        <li>This <a href="https://www.youtube.com/watch?t=240s&v=CrMIEz_mSJM">talk</a> is a great introduction to thinking about the long-term future.</li>
+      </ul>
+    </Prose>
+  </section>
+</Base>

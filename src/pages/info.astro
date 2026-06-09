@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Prose from '../components/Prose.astro';
+import groupGif from '../assets/images/tempImageOSlPou.gif';
+---
+
+<Base title="Intro Talk" description="An introduction to effective altruism — what it is, and how you can have a big positive impact with your life.">
+  <PageHero
+    eyebrow="Einführungsvortrag"
+    title="Effektiver Altruismus — eine Einführung"
+    lead="Wie können wir nicht nur Gutes tun, sondern möglichst viel Gutes tun?"
+  />
+
+  <section class="mx-auto max-w-4xl px-5 py-16">
+    <Prose>
+      <h2>Worum geht es?</h2>
+      <p>
+        Was sind eigentlich die dringendsten globalen Probleme? Wie kann ich mit meinem Leben einen großen positiven
+        Einfluss haben? Zum Semesterstart organisieren wir einen Vortrag, bei dem wir unsere Antworten auf diese Fragen
+        vorstellen und mit euch ins Gespräch kommen.
+      </p>
+      <p>
+        Wir sind eine Gruppe Aachener Studierender, die als Teil einer weltweiten Community langfristig möglichst viel
+        Gutes tun wollen. Als Mitglieder der Effektiver-Altruismus-Bewegung sind wir überzeugt, dass wissenschaftliches
+        Vorgehen und eine rationale Denkweise hervorragend zu einer altruistischen Motivation passen.
+      </p>
+
+      <h2>Mitmachen</h2>
+      <ul>
+        <li>Eine Anmeldung vorab ist nicht erforderlich — komm einfach vorbei.</li>
+        <li>Melde dich bei unserem <a href="http://eepurl.com/g5LGrL">Newsletter</a> an, um rechtzeitig eine Erinnerung für den nächsten Vortrag und weitere Veranstaltungen zu erhalten.</li>
+      </ul>
+    </Prose>
+
+    <figure class="mt-12 overflow-hidden rounded-3xl border border-line/60">
+      <img src={groupGif.src} alt="Die EA Aachen Gruppe" class="w-full" />
+      <figcaption class="bg-ink-soft px-5 py-3 text-center text-sm text-fg-muted">Das sind wir — wir freuen uns auf dich!</figcaption>
+    </figure>
+  </section>
+</Base>

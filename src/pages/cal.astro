@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+
+const calSrc =
+  'https://calendar.google.com/calendar/embed?src=qhm3972bqtpu5uu8o1vrff9eao%40group.calendar.google.com&ctz=Europe%2FBerlin&mode=AGENDA&bgcolor=%230a1320&showTitle=0&showPrint=0&showCalendars=0';
+const newsletter = 'http://eepurl.com/g5LGrL';
+const whatsapp = 'https://chat.whatsapp.com/LYduMS20H9j7voTgijQGqW';
+---
+
+<Base title="Events" description="Our upcoming events — meetups, socials, reading groups and more. Just come along to the next one.">
+  <PageHero
+    eyebrow="Calendar"
+    title="Just come to our next meetup"
+    lead="We meet almost every week — meetups, socials, reading groups and more. Everyone is welcome."
+  />
+
+  <section class="mx-auto max-w-4xl px-5 py-16">
+    <div class="overflow-hidden rounded-2xl border border-line/60 bg-surface">
+      <iframe
+        src={calSrc}
+        title="EA Aachen events calendar"
+        class="h-[600px] w-full"
+        style="border:0"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <a href={newsletter} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Get events by email</a>
+      <a href={whatsapp} class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Join the WhatsApp group</a>
+    </div>
+  </section>
+</Base>

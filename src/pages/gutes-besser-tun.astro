@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/links';
+import lake from '../assets/images/perica-oreskovic-5xh0fSg3Emo-unsplash.jpg';
+import clothes from '../assets/images/jason-briscoe-tYGooMvu0hA-unsplash.jpg';
+import question from '../assets/images/eunice-lituanas-bpxgyD4YYt4-unsplash.jpg';
+
+const newsletter = 'https://ea-aachen.us10.list-manage.com/subscribe?id=3f5fa62bb1&u=d8f281532aca0e1fa682b94af';
+const instagram = 'https://www.instagram.com/ea_aachen/';
+
+const steps = [
+  { text: 'Stell dir vor, du stehst an einem See. Plötzlich siehst du ein Kind ertrinken.', img: lake, alt: 'Ein ruhiger See' },
+  { text: 'Doch um das Kind zu retten, müsstest du deine gerade neu gekaufte, teure Kleidung ruinieren.', img: clothes, alt: 'Neue Kleidung' },
+  { text: 'Würdest du das Kind retten?', img: question, alt: 'Eine Frage' },
+];
+---
+
+<Base title="Gutes besser tun" description="Eine kleine Geschichte darüber, warum wir uns fragen, wie wir möglichst viel Gutes tun können.">
+  <section class="mx-auto max-w-3xl px-5 py-16 text-center sm:py-20">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Gutes besser tun</p>
+    <h1 class="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">Eine kleine Geschichte</h1>
+  </section>
+
+  {steps.map((s, i) => (
+    <section class="mx-auto max-w-4xl px-5 py-12">
+      <div class="overflow-hidden rounded-3xl border border-line/60">
+        <Image src={s.img} alt={s.alt} widths={[640, 1000]} class="h-64 w-full object-cover sm:h-80" />
+      </div>
+      <p class="mx-auto mt-8 max-w-2xl text-center text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">{s.text}</p>
+      <p class="mt-4 text-center text-sm text-fg-muted">{i + 1} / 6</p>
+    </section>
+  ))}
+
+  <section class="mx-auto max-w-3xl px-5 py-12 text-center">
+    <p class="text-3xl font-bold tracking-tight text-accent sm:text-4xl">Ja, natürlich!</p>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 py-12 text-center">
+    <p class="text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">
+      Wir auch! Und wir sind überzeugt, dass wir in genau so einer Situation sind: Wir haben das Potential, während
+      unseres Lebens dutzende Menschenleben zu retten.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 py-12 text-center">
+    <p class="text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">
+      Wir beschäftigen uns damit, welche Maßnahmen am effektivsten sind, um möglichst viele Menschen- und Tierleben zu
+      retten. Heute und in Zukunft.
+    </p>
+  </section>
+
+  <section class="border-t border-line/60 bg-gradient-to-b from-ink-soft to-ink">
+    <div class="mx-auto max-w-2xl px-5 py-20 text-center">
+      <h2 class="text-3xl font-bold tracking-tight">Du auch?</h2>
+      <p class="mt-4 text-fg-muted">
+        Dann komm zu einem unserer Events vorbei. Wir treffen uns jeden Mittwoch um 19:00 Uhr im CARL, Hörsaal S03.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={newsletter} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Zum Newsletter anmelden</a>
+        <a href={instagram} class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Auf Instagram folgen</a>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,36 @@
+@import '@fontsource-variable/inter';
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-ink: #0a1320;
+  --color-ink-soft: #0f1d30;
+  --color-surface: #16273f;
+  --color-surface-2: #1d3149;
+  --color-line: #28405c;
+  --color-fg: #eaf1f8;
+  --color-fg-muted: #9fb3c8;
+  --color-accent: #25c6b2;
+  --color-accent-soft: #5fe0d0;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-glow: 0 0 0 1px rgba(37, 198, 178, 0.18), 0 20px 60px -25px rgba(37, 198, 178, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-ink);
+  color: var(--color-fg);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}

@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/links';
+import groupPhoto from '../assets/images/IMG_0973.jpeg';
+import flowchart from '../assets/images/image-asset.jpeg';
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-line/60">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_70%_-10%,rgba(37,198,178,0.18),transparent_70%)]"></div>
+    <div class="pointer-events-none absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:54px_54px] [mask-image:radial-gradient(70%_60%_at_50%_0%,black,transparent)]"></div>
+    <div class="relative mx-auto max-w-6xl px-5 py-24 sm:py-32">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Effective Altruism Aachen</p>
+      <h1 class="mt-5 max-w-3xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
+        Compassion.<br />Reason.<br /><span class="text-accent">Action.</span>
+      </h1>
+      <p class="mt-7 max-w-xl text-lg leading-relaxed text-fg-muted">
+        We're a community in Aachen for people trying to have a positive impact with their lives — meeting weekly to
+        engage with interesting ideas, and helping each other use our careers to tackle the big problems of our time.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href={href('/join')} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Join us</a>
+        <a href={href('/learn')} class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section class="mx-auto max-w-6xl px-5 py-20 sm:py-28">
+    <div class="grid items-center gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">What we do</h2>
+        <p class="mt-5 leading-relaxed text-fg-muted">
+          Effective altruism is a global community of people who have made helping others a core part of their lives,
+          and who use evidence and careful reasoning to figure out how to do so as effectively as possible.
+        </p>
+        <p class="mt-4 leading-relaxed text-fg-muted">
+          For an in-depth exploration we recommend joining an
+          <a href="https://www.effectivealtruism.org/virtual-programs/introductory-program" class="text-accent underline-offset-4 hover:underline">introductory fellowship</a>,
+          or check out the <a href={href('/learn')} class="text-accent underline-offset-4 hover:underline">resources we've curated</a> for you.
+        </p>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-3 rounded-3xl bg-accent/10 blur-2xl"></div>
+        <Image src={groupPhoto} alt="The EA Aachen community at a meetup" widths={[480, 800]} class="relative w-full rounded-2xl border border-line/60 object-cover shadow-[var(--shadow-glow)]" />
+      </div>
+    </div>
+  </section>
+
+  <!-- EA explanation / flowchart -->
+  <section class="border-y border-line/60 bg-ink-soft">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:py-28 lg:grid-cols-2">
+      <div class="order-2 lg:order-1">
+        <Image src={flowchart} alt="Flowchart of how different empirical and value judgements lead to different focus areas in effective altruism" widths={[480, 800]} class="w-full rounded-2xl border border-line/60 bg-surface object-contain" />
+      </div>
+      <div class="order-1 lg:order-2">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">A way of thinking about doing good</h2>
+        <p class="mt-5 leading-relaxed text-fg-muted">
+          New to the ideas? Start with this
+          <a href="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism/" class="text-accent underline-offset-4 hover:underline">introduction to effective altruism</a>.
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-fg-muted/80">
+          The flowchart maps how different empirical and value judgements lead people toward different focus areas.
+          It was made in 2015 and EA ideas have evolved since — see our
+          <a href={href('/learn')} class="text-accent underline-offset-4 hover:underline">reading recommendations</a> for a current overview.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission statement -->
+  <section class="mx-auto max-w-5xl px-5 py-24 text-center sm:py-32">
+    <p class="text-3xl font-semibold leading-snug tracking-tight sm:text-5xl">
+      We're committed to doing the <span class="text-accent">most good we can</span> — using our time and money as wisely as we can.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="border-t border-line/60 bg-gradient-to-b from-ink-soft to-ink">
+    <div class="mx-auto max-w-3xl px-5 py-20 text-center">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Does this sound interesting to you, too?</h2>
+      <p class="mt-4 text-fg-muted">Come along to one of our events — everyone is welcome, whatever your background.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={href('/join')} class="rounded-full bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-accent-soft">Join one of our events</a>
+        <a href="http://eepurl.com/g5LGrL" class="rounded-full border border-line px-6 py-3 font-semibold text-fg transition hover:border-accent hover:text-accent">Get the newsletter</a>
+      </div>
+    </div>
+  </section>
+</Base>

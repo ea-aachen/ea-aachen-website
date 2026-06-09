@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Prose from '../components/Prose.astro';
+---
+
+<Base title="Legal Disclosure" description="Impressum — Effective Altruism Aachen e.V.">
+  <PageHero eyebrow="Legal" title="Legal disclosure" />
+
+  <section class="mx-auto max-w-3xl px-5 py-16">
+    <Prose>
+      <p>Information in accordance with Section 5 TMG</p>
+      <p>
+        <strong>Effective Altruism Aachen e.V.</strong><br />
+        ℅ Anton Dorn<br />
+        Lütticher Straße 17b<br />
+        52064 Aachen
+      </p>
+
+      <h2>Represented by</h2>
+      <p>
+        Anton Dorn, 1. Vorsitzender<br />
+        Arthur Voigt, Stellvertretender Vorsitzender
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        E-Mail: <a href="mailto:info@ea-aachen.org">info@ea-aachen.org</a><br />
+        Web: <a href="https://www.ea-aachen.org">ea-aachen.org</a>
+      </p>
+    </Prose>
+  </section>
+</Base>
