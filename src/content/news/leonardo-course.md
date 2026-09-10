@@ -5,7 +5,7 @@ when: Past semesters · Project Leonardo
 summary: An official RWTH course on effective altruism, with talks from researchers and people running charities.
 ---
 
-In cooperation with RWTH Aachen University, we ran an official course on effective altruism as part of [Project Leonardo](https://www.leonardo.rwth-aachen.de/en/homepage/), for example in the [winter semester 2023/24](https://www.leonardo.rwth-aachen.de/en/modules/wise-2023/effective-altruism/). RWTH students could register via RWTHonline and, depending on their course of study, earn credit points; external participants were welcome too.
+In cooperation with RWTH Aachen University, we ran an official course on effective altruism as part of [Project Leonardo](https://www.leonardo.rwth-aachen.de/en/homepage/). RWTH students could register via RWTHonline and, depending on their course of study, earn credit points; external participants were welcome too.
 
 ## What it was about
 
