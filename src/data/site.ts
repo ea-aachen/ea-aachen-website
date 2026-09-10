@@ -7,18 +7,17 @@ export const site = {
   nav: [
     { label: 'Home', href: '/' },
     { label: 'Learn', href: '/learn' },
-    { label: 'Uni Course', href: '/uni-course' },
-    { label: 'Events', href: '/cal' },
+    { label: 'News', href: '/news' },
   ],
   cta: { label: 'Join us', href: '/join' },
   more: [
     { label: 'Get Involved', href: '/join' },
     { label: 'Gutes besser tun', href: '/gutes-besser-tun' },
-    { label: 'Intro Talk', href: '/info' },
   ],
+  // Accounts are inactive; uncomment to list them in the footer again.
   socials: [
-    { label: 'Instagram', href: 'https://www.instagram.com/ea_aachen/' },
-    { label: 'Facebook', href: 'https://www.facebook.com/EAAachen/events' },
+    // { label: 'Instagram', href: 'https://www.instagram.com/ea_aachen/' },
+    // { label: 'Facebook', href: 'https://www.facebook.com/EAAachen/events' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy-policy' },

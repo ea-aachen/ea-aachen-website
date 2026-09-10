@@ -6,6 +6,11 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://eaachen.org',
   base: '/',
+  redirects: {
+    '/cal': '/news',
+    '/uni-course': '/news/leonardo-course',
+    '/info': '/news/intro-talk',
+  },
   trailingSlash: 'ignore',
   integrations: [sitemap()],
   vite: { plugins: [tailwindcss()] },

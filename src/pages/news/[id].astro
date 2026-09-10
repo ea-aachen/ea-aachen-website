@@ -1,0 +1,27 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Prose from '../../components/Prose.astro';
+import { href } from '../../lib/links';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('news');
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const when = post.data.when ?? post.data.date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+---
+
+<Base title={post.data.title} description={post.data.summary}>
+  <PageHero eyebrow={when} title={post.data.title} />
+
+  <section class="mx-auto max-w-4xl px-5 py-16" lang={post.data.lang}>
+    <Prose>
+      <Content />
+    </Prose>
+    <a href={href('/news')} class="mt-12 inline-block font-semibold text-accent hover:underline">← All news</a>
+  </section>
+</Base>

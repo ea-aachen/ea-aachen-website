@@ -2,30 +2,35 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import Prose from '../components/Prose.astro';
+import { site } from '../data/site';
 ---
 
-<Base title="Legal Disclosure" description="Impressum — Effective Altruism Aachen e.V.">
+<Base title="Legal Disclosure" description="Impressum — Effective Altruism Aachen, a local group supported by Effektiver Altruismus Deutschland e.V.">
   <PageHero eyebrow="Legal" title="Legal disclosure" />
 
   <section class="mx-auto max-w-3xl px-5 py-16">
     <Prose>
-      <p>Information in accordance with Section 5 TMG</p>
       <p>
-        <strong>Effective Altruism Aachen e.V.</strong><br />
-        ℅ Anton Dorn<br />
-        Lütticher Straße 17b<br />
-        52064 Aachen
+        Effective Altruism Aachen is a local group of the German effective altruism community, supported by
+        <a href="https://effektiveraltruismus.de/">Effektiver Altruismus Deutschland e.V.</a>
+        (<a href="https://effektiveraltruismus.de/lokalgruppen/">local groups</a>).
       </p>
 
-      <h2>Represented by</h2>
+      <h2>Information in accordance with Section 5 DDG</h2>
       <p>
-        Anton Dorn, 1. Vorsitzender<br />
-        Arthur Voigt, Stellvertretender Vorsitzender
+        <strong>Effektiver Altruismus Deutschland e.V.</strong><br />
+        c/o UES gGmbH<br />
+        Müllerstr. 138D<br />
+        13353 Berlin
+      </p>
+      <p>
+        Represented by its board — see the
+        <a href="https://www.effektiveraltruismus.de/impressum">Impressum of Effektiver Altruismus Deutschland e.V.</a>
       </p>
 
       <h2>Contact</h2>
       <p>
-        E-Mail: <a href="mailto:info@ea-aachen.org">info@ea-aachen.org</a><br />
+        E-Mail: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><br />
         Web: <a href="https://eaachen.org">eaachen.org</a>
       </p>
     </Prose>
