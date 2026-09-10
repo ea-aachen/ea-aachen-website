@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import Prose from '../../components/Prose.astro';
 import { href } from '../../lib/links';
+import { whenLabel } from '../../lib/news';
 
 export async function getStaticPaths() {
   const posts = await getCollection('news');
@@ -12,7 +13,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const when = post.data.when ?? post.data.date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+const when = whenLabel(post);
 ---
 
 <Base title={post.data.title} description={post.data.summary}>

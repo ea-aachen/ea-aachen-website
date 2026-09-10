@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import Prose from '../components/Prose.astro';
+import { site } from '../data/site';
 ---
 
 <Base title="Privacy Policy" description="How this website handles your data.">
@@ -38,7 +39,7 @@ import Prose from '../components/Prose.astro';
 
       <h2>Contact</h2>
       <p>
-        For any questions about your data, write to <a href="mailto:info@ea-aachen.org">info@ea-aachen.org</a>.
+        For any questions about your data, write to <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
       </p>
     </Prose>
   </section>

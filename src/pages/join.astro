@@ -1,11 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
-
-const newsletter = 'http://eepurl.com/g5LGrL';
-const whatsapp = 'https://chat.whatsapp.com/LYduMS20H9j7voTgijQGqW';
-const aiSafety = 'https://aisafetyaachen.org/cal';
-const archive = 'https://us10.campaign-archive.com/home/?id=3f5fa62bb1&u=d8f281532aca0e1fa682b94af';
+import RegularMeetups from '../components/RegularMeetups.astro';
+import { site } from '../data/site';
+import { href } from '../lib/links';
 ---
 
 <Base title="Get Involved" description="Join Effective Altruism Aachen — sign up for the newsletter or join the WhatsApp group.">
@@ -17,12 +15,12 @@ const archive = 'https://us10.campaign-archive.com/home/?id=3f5fa62bb1&u=d8f2815
 
   <section class="mx-auto max-w-4xl px-5 py-16">
     <div class="grid gap-4 sm:grid-cols-2">
-      <a href={newsletter} class="group rounded-2xl border border-line/60 bg-ink-soft p-6 transition hover:border-accent">
+      <a href={site.links.newsletter} class="group rounded-2xl border border-line/60 bg-ink-soft p-6 transition hover:border-accent">
         <h3 class="text-lg font-semibold text-fg">Sign up for the newsletter</h3>
         <p class="mt-2 text-sm leading-relaxed text-fg-muted">An email whenever something is coming up — events, trips to conferences and more.</p>
         <span class="mt-4 inline-block font-semibold text-accent">Subscribe →</span>
       </a>
-      <a href={whatsapp} class="group rounded-2xl border border-line/60 bg-ink-soft p-6 transition hover:border-accent">
+      <a href={site.links.whatsapp} class="group rounded-2xl border border-line/60 bg-ink-soft p-6 transition hover:border-accent">
         <h3 class="text-lg font-semibold text-fg">Join the WhatsApp group</h3>
         <p class="mt-2 text-sm leading-relaxed text-fg-muted">Announcements and chats with the community.</p>
         <span class="mt-4 inline-block font-semibold text-accent">Open WhatsApp →</span>
@@ -32,11 +30,7 @@ const archive = 'https://us10.campaign-archive.com/home/?id=3f5fa62bb1&u=d8f2815
     <div class="mt-16 space-y-12">
       <div>
         <h2 class="text-2xl font-bold tracking-tight">Regular meetups</h2>
-        <p class="mt-4 leading-relaxed text-fg-muted">
-          EA Aachen doesn't run regular meetups at the moment. Our sister group
-          <a href={aiSafety} class="text-accent hover:underline">AI Safety Aachen</a> does — have a look at their
-          calendar for coworking sessions and other meetups in Aachen.
-        </p>
+        <p class="mt-4 leading-relaxed text-fg-muted"><RegularMeetups /></p>
       </div>
 
       <div>
@@ -47,7 +41,8 @@ const archive = 'https://us10.campaign-archive.com/home/?id=3f5fa62bb1&u=d8f2815
           all about.
         </p>
         <p class="mt-4 text-sm text-fg-muted">
-          Curious what we've done so far? Browse our <a href={archive} class="text-accent hover:underline">past newsletter editions</a>.
+          Curious what we've done so far? Have a look at our <a href={href('/news')} class="text-accent hover:underline">news</a>
+          and <a href={site.links.newsletterArchive} class="text-accent hover:underline">past newsletter editions</a>.
         </p>
       </div>
     </div>

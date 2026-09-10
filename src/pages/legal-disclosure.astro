@@ -31,7 +31,7 @@ import { site } from '../data/site';
       <h2>Contact</h2>
       <p>
         E-Mail: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><br />
-        Web: <a href="https://eaachen.org">eaachen.org</a>
+        Web: <a href={Astro.site?.href}>{Astro.site?.host}</a>
       </p>
     </Prose>
   </section>

@@ -24,4 +24,10 @@ export const site = {
     { label: 'Legal Disclosure', href: '/legal-disclosure' },
   ],
   contactEmail: 'info@ea-aachen.org',
+  links: {
+    newsletter: 'https://ea-aachen.us10.list-manage.com/subscribe?u=d8f281532aca0e1fa682b94af&id=3f5fa62bb1',
+    newsletterArchive: 'https://us10.campaign-archive.com/home/?id=3f5fa62bb1&u=d8f281532aca0e1fa682b94af',
+    whatsapp: 'https://chat.whatsapp.com/LYduMS20H9j7voTgijQGqW',
+    aiSafetyMeetups: 'https://aisafetyaachen.org/cal',
+  },
 };
