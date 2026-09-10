@@ -7,13 +7,8 @@ export const site = {
   nav: [
     { label: 'Home', href: '/' },
     { label: 'Learn', href: '/learn' },
-    { label: 'News', href: '/news' },
   ],
   cta: { label: 'Join us', href: '/join' },
-  more: [
-    { label: 'Get Involved', href: '/join' },
-    { label: 'Gutes besser tun', href: '/gutes-besser-tun' },
-  ],
   // Accounts are inactive; uncomment to list them in the footer again.
   socials: [
     // { label: 'Instagram', href: 'https://www.instagram.com/ea_aachen/' },

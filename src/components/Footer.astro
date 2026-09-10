@@ -3,7 +3,7 @@ import { site } from '../data/site';
 import { href } from '../lib/links';
 import Logo from './Logo.astro';
 const year = new Date().getFullYear();
-const explore = [...site.nav.filter((n) => n.href !== '/'), ...site.more];
+const explore = [...site.nav.filter((n) => n.href !== '/'), site.cta];
 ---
 
 <footer class="border-t border-line/60 bg-ink-soft">

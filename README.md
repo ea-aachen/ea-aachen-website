@@ -18,7 +18,7 @@ Needs Node.js.
 ## Edit the site
 
 - **Pages** are in `src/pages/`, one `.astro` file per page (`index.astro` is the home page).
-- **News posts** are Markdown files in `src/content/news/` — copy an existing one and adjust the front matter. `upcoming: true` puts a post under "Coming up"; `when` is the date line shown instead of `date`, which only sets the order.
+- **News posts** are Markdown files in `src/content/news/` — copy an existing one and adjust the front matter. They're listed on the Join page (`join.astro`); `upcoming: true` puts a post under "Coming up"; `when` is the date line shown instead of `date`, which only sets the order.
 - **Menu, footer links, socials and contact email** live in `src/data/site.ts` — edit there to change navigation site-wide.
 - **Images** go in `src/assets/images/` and are imported into pages; Astro optimizes them at build time.
 - **Shared layout** (header, footer, `<head>`) is `src/layouts/Base.astro`; smaller reusable pieces are in `src/components/`.

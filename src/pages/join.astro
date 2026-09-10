@@ -1,9 +1,17 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import RegularMeetups from '../components/RegularMeetups.astro';
 import { site } from '../data/site';
 import { href } from '../lib/links';
+import { whenLabel } from '../lib/news';
+
+const posts = (await getCollection('news')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const groups = [
+  { label: 'Coming up', posts: posts.filter((p) => p.data.upcoming), upcoming: true },
+  { label: "What we've done", posts: posts.filter((p) => !p.data.upcoming), upcoming: false },
+].filter((g) => g.posts.length > 0);
 ---
 
 <Base title="Get Involved" description="Join Effective Altruism Aachen — sign up for the newsletter or join the WhatsApp group.">
@@ -40,9 +48,26 @@ import { href } from '../lib/links';
           members join fellowships — both for engaged EAs making career decisions and for newcomers learning what EA is
           all about.
         </p>
-        <p class="mt-4 text-sm text-fg-muted">
-          Curious what we've done so far? Have a look at our <a href={href('/news')} class="text-accent hover:underline">news</a>
-          and <a href={site.links.newsletterArchive} class="text-accent hover:underline">past newsletter editions</a>.
+
+        {groups.map((g) => (
+          <div class="mt-10">
+            <h3 class:list={['text-sm font-semibold uppercase tracking-[0.2em]', g.upcoming ? 'text-accent' : 'text-fg-muted']}>{g.label}</h3>
+            <ul class="mt-4 divide-y divide-line/60 border-y border-line/60">
+              {g.posts.map((p) => (
+                <li>
+                  <a href={href(`/news/${p.id}`)} class="group block py-6">
+                    <p class:list={['text-xs font-semibold uppercase tracking-wider', g.upcoming ? 'text-accent' : 'text-fg-muted']}>{whenLabel(p)}</p>
+                    <h4 class="mt-1.5 text-xl font-semibold tracking-tight text-fg transition group-hover:text-accent">{p.data.title}</h4>
+                    <p class="mt-2 text-sm leading-relaxed text-fg-muted" lang={p.data.lang}>{p.data.summary}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
+        <p class="mt-8 text-sm text-fg-muted">
+          Older updates are in our <a href={site.links.newsletterArchive} class="text-accent hover:underline">past newsletter editions</a>.
         </p>
       </div>
     </div>

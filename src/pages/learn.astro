@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import Prose from '../components/Prose.astro';
+import { href } from '../lib/links';
 ---
 
 <Base title="Learn More" description="Curated resources to explore effective altruism — introductions, career guides, and in-depth reading.">
@@ -19,6 +20,7 @@ import Prose from '../components/Prose.astro';
         <li><a href="https://www.youtube.com/watch?v=Diuv3XZQXyc">TED Talk</a> by philosopher <a href="https://en.wikipedia.org/wiki/Peter_Singer">Peter Singer</a> on the why and how of effective altruism.</li>
         <li><a href="https://www.youtube.com/watch?v=WyprXhvGVYk">TED Talk</a> by Oxford philosopher <a href="https://en.wikipedia.org/wiki/William_MacAskill">William MacAskill</a> on the most important problems of our time.</li>
         <li><a href="http://mindingourway.com/on-caring/">On Caring</a> by Nate Soares — a classic essay exploring the workings of empathy. Warmly recommended for everyone, whether new to EA or not.</li>
+        <li><a href={href('/learn/gutes-besser-tun')} lang="de">Gutes besser tun</a> — our short story (in German) on why we ask how to do the most good.</li>
       </ul>
 
       <h2>Career resources</h2>
