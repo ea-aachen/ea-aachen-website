@@ -2,7 +2,7 @@
 
 Website for Effective Altruism Aachen — a community in Aachen for people using evidence and reason to have a positive impact with their time and careers.
 
-**Live:** https://ea-aachen.github.io/ea-aachen-website/
+**Live:** https://eaachen.org
 
 Static site built with [Astro](https://astro.build) and Tailwind CSS, deployed to GitHub Pages.
 
@@ -41,4 +41,4 @@ public/          files served as-is (favicon, ...)
 
 ## Custom domain
 
-The site currently lives under `github.io`. To serve it from a custom domain: set `base` to `/` in `astro.config.mjs`, add a `public/CNAME` file containing the domain, and point the domain's DNS at GitHub Pages.
+The site is served from `eaachen.org`: `site` in `astro.config.mjs` and `public/CNAME` name the domain, and its DNS points at GitHub Pages.
